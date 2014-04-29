@@ -106,6 +106,10 @@ public class Triangle {
 		return angleA;
 	}
 
+	public double getAngleARads() {
+		return angleA * (Math.PI / 180);
+	}
+
 	public void setAngleA( double angleA ) {
 		this.angleA = angleA;
 	}
@@ -114,12 +118,20 @@ public class Triangle {
 		return angleB;
 	}
 
+	public double getAngleBRads() {
+		return angleB * (Math.PI / 180);
+	}
+
 	public void setAngleB( double angleB ) {
 		this.angleB = angleB;
 	}
 
 	public double getAngleC() {
 		return angleC;
+	}
+
+	public double getAngleCRads() {
+		return angleC * (Math.PI / 180);
 	}
 
 	public void setAngleC( double angleC ) {
@@ -138,5 +150,15 @@ public class Triangle {
 
 		return out.toString();
 	}
+
+	/**
+	 * indicates whether all sides and angles have been solved
+	 * 
+	 * @return bool
+	 */
+	public boolean isSolved() {
+		return (sideA != 0 && sideB != 0 && sideC != 0 && angleA != 0 && angleB != 0 && angleC != 0);
+	}
+
 
 }
